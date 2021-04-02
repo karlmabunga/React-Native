@@ -6,12 +6,14 @@ const ColorScreen = () => {
   const [colors, setColors] = useState([]);
 
   return <View>
+
     <Button
       title='Add a Color'
       onPress={() => {
         setColors([...colors, randomRgb()])
       }}
     />
+
     <FlatList
       keyExtractor={(item) => item}
       data={colors}
